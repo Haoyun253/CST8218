@@ -29,7 +29,7 @@
                     () => {
                         async function getContacts() {
                             let result = await fetch(
-                            "http://localhost:8080/bouncer-deng1/resources/cst8218.haoyun.bouncer.entity.bouncer",
+                            "http://localhost:8080/bouncer-deng3/resources/cst8218.haoyun.bouncer.entity.bouncer",
                             {
                                 method: 'GET',
                                 headers: {'Accept': 'application/json'}
@@ -68,7 +68,7 @@
                         if (key === selected.index) { //this is the one the user is changing
                             newItem = Object.assign({}, item, {[selected.field]: selected.value}); //make a copy of the item to change
                             setSelected({}); // reset selected until next click/change
-                            fetch("http://localhost:8080/bouncer-deng1/resources/cst8218.haoyun.bouncer.entity.bouncer/" + item.id, {
+                            fetch("http://localhost:8080/bouncer-deng3/resources/cst8218.haoyun.bouncer.entity.bouncer/" + item.id, {
                                 method: 'PUT',
                                 body: JSON.stringify(newItem),
                                 headers: {'Content-type': 'application/json',

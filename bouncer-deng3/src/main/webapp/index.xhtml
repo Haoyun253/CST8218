@@ -14,15 +14,15 @@
             <h:form>
                 <h:selectOneMenu value="#{bouncerController.language}" onchange="submit()">
                     <f:selectItem itemValue="en" itemLabel="English" />
-                    <f:selectItem itemValue="fr" itemLabel="Franch" />
+                    <f:selectItem itemValue="fr" itemLabel="French" />
                 </h:selectOneMenu>
             </h:form>
             <br />
-            <h:link outcome="/bouncer/List" value="Show All Bouncer Items"/>
+            <h:link outcome="/bouncer/List" value="#{bundle.IndexBouncer}"/>
             <br></br>
-            <h:link outcome="/bouncer/BouncerReact.html" value="Bouncer React"/>
+            <h:link outcome="/bouncer/BouncerReact.html" value="#{bundle.IndexBouncerReact}"/>
             <br />
-            <h:link outcome="/appUser/List" value="Show All AppUser Items"/>
+            <h:link outcome="/appUser/List" value="#{bundle.IndexAppUser}"/>
         </h:body>
 
 </html>
