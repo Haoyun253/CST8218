@@ -22,15 +22,25 @@
         <welcome-file>faces/index.xhtml</welcome-file>
     </welcome-file-list>
       <security-constraint>
-        <display-name>AdminConstraint</display-name>
+           <display-name>AdminConstraint</display-name>
         <web-resource-collection>
-        <web-resource-name>moviedbadmin</web-resource-name>
-        <description>Administration area</description>
-        <url-pattern>/faces/Options.xhtml</url-pattern>
+            <web-resource-name>Admin JSF Area</web-resource-name>
+            <url-pattern>/faces/appUser/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-        <description>Basic Constraint</description>
-        <role-name>Admin</role-name>
+            <role-name>Admin</role-name>
         </auth-constraint>
-        </security-constraint>
+    </security-constraint>  
+    
+     <security-constraint>
+           <display-name>JsfConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>JSF Area</web-resource-name>
+            <url-pattern>/faces/bouncer/*</url-pattern> 
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>PagesGroup</role-name>
+            <role-name>Admin</role-name>
+        </auth-constraint>
+    </security-constraint>   
 </web-app>

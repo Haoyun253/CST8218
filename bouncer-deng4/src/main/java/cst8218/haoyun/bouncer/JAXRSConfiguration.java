@@ -10,18 +10,20 @@ import javax.ws.rs.core.Application;
 
 /**
  * Configures JAX-RS for the application.
+ *
  * @author Juneau
  */
 @ApplicationScoped
 @Named
 @DatabaseIdentityStoreDefinition(
-        dataSourceLookup = "java:comp/DefaultDataSource",
-        callerQuery = "select password from caller where name = ?",
-        groupsQuery = "select group_name from caller_groups where caller_name = ?",
+        dataSourceLookup = "${'java:comp/DefaultDataSource'}",
+        callerQuery = "#{'select password from app.appuser where username = ?'}",
+        groupsQuery = "select groupname from app.appuser where username = ?",
         hashAlgorithm = PasswordHash.class,
         priority = 10
 )
+@BasicAuthenticationMechanismDefinition
 @ApplicationPath("resources")
 public class JAXRSConfiguration extends Application {
-    
+
 }
