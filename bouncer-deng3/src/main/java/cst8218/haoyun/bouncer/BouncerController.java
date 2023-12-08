@@ -1,4 +1,4 @@
-package cst8218.haoyun.bounce;
+package cst8218.haoyun.bouncer;
 
 import cst8218.haoyun.bouncer.entity.Bouncer;
 import cst8218.haoyun.bouncer.util.JsfUtil;
@@ -26,7 +26,7 @@ public class BouncerController implements Serializable {
     private Bouncer current;
     private DataModel items = null;
     @EJB
-    private cst8218.haoyun.bounce.BouncerFacade ejbFacade;
+    private cst8218.haoyun.bouncer.BouncerFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
     private Locale locale;

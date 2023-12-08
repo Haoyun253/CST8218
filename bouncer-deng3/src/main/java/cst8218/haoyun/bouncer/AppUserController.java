@@ -1,4 +1,4 @@
-package cst8218.haoyun.bounce;
+package cst8218.haoyun.bouncer;
 
 import cst8218.haoyun.bouncer.entity.AppUser;
 import cst8218.haoyun.bouncer.util.JsfUtil;
@@ -24,7 +24,7 @@ public class AppUserController implements Serializable {
     private AppUser current;
     private DataModel items = null;
     @EJB
-    private cst8218.haoyun.bounce.AppUserFacade ejbFacade;
+    private cst8218.haoyun.bouncer.AppUserFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
 

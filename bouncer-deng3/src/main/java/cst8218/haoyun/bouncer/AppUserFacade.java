@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cst8218.haoyun.bounce;
+package cst8218.haoyun.bouncer;
 
 import cst8218.haoyun.bouncer.entity.AppUser;
 import javax.ejb.Stateless;
