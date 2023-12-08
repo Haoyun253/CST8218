@@ -1,4 +1,4 @@
-package cst8218.haoyun.bounce.resources;
+package cst8218.haoyun.bouncer.resource;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

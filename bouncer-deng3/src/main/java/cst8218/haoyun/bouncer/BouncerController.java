@@ -1,8 +1,8 @@
 package cst8218.haoyun.bounce;
 
 import cst8218.haoyun.bouncer.entity.Bouncer;
-import cst8218.haoyun.bounce.util.JsfUtil;
-import cst8218.haoyun.bounce.util.PaginationHelper;
+import cst8218.haoyun.bouncer.util.JsfUtil;
+import cst8218.haoyun.bouncer.util.PaginationHelper;
 
 import java.io.Serializable;
 import java.util.Locale;

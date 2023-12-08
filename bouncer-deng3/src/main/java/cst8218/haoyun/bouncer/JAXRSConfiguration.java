@@ -1,4 +1,4 @@
-package cst8218.haoyun.bounce;
+package cst8218.haoyun.bouncer;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

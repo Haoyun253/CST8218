@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="#{bouncerController.language}"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+            <title>Facelet Title</title>
+            <h:outputStylesheet name="css/jsfcrud.css"/>
+    </h:head>
+    <h:body>
+            <h:link outcome="/bouncer/List" value="#{bundle.IndexBouncer}"/>
+            <br></br>
+            <h:link outcome="/bouncer/BouncerReact.html" value="#{bundle.IndexBouncerReact}"/>
+            <br />
+            <h:link outcome="/appUser/List" value="#{bundle.IndexAppUser}"/>
+    </h:body>
+</html>

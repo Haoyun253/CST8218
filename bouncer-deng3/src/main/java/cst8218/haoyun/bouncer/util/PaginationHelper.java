@@ -1,4 +1,4 @@
-package cst8218.haoyun.bounce.util;
+package cst8218.haoyun.bouncer.util;
 
 import javax.faces.model.DataModel;
 
