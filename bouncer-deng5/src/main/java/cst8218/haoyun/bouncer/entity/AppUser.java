@@ -15,16 +15,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.security.enterprise.identitystore.PasswordHash;
 import javax.security.enterprise.identitystore.Pbkdf2PasswordHash;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author dell
  */
 @Entity
+@Table(name = "AppUser2")
+@XmlRootElement
 public class AppUser implements Serializable {
 
     private static final long serialVersionUID = 1L;

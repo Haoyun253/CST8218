@@ -5,7 +5,7 @@
  */
 package cst8218.haoyun.bouncer.service;
 
-import cst8218.haoyun.bouncer.entity.Bouncer;
+import cst8218.haoyun.bouncer.entity.AppUser;
 import java.util.List;
 import javax.annotation.security.DeclareRoles;
 import javax.annotation.security.RolesAllowed;
@@ -26,66 +26,66 @@ import javax.ws.rs.core.MediaType;
  *
  * @author noahh
  */
-//@DeclareRoles("{Admin,Administration,Regular}")
+@DeclareRoles("{Admin,Administration,Regular}")
 @Stateless
-@Path("cst8218.haoyun.bouncer.entity.bouncer")
-public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
+@Path("cst8218.haoyun.bouncer.entity.appuser")
+public class AppUserFacadeREST extends AbstractFacade<AppUser> {
 
     @PersistenceContext(unitName = "my_persistence_unit")
     private EntityManager em;
 
-    public BouncerFacadeREST() {
-        super(Bouncer.class);
+    public AppUserFacadeREST() {
+        super(AppUser.class);
     }
     
-//    @RolesAllowed("{Admin,Administration, Regular}")
+    @RolesAllowed("Admin,Administration")
     @POST
     @Override
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public void create(Bouncer entity) {
+    public void create(AppUser entity) {
         super.create(entity);
     }
-
-//    @RolesAllowed("{Admin,Administration, Regular}")    
+    
+    @RolesAllowed("Admin,Administration")
     @PUT
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public void edit(@PathParam("id") Long id, Bouncer entity) {
+    public void edit(@PathParam("id") Long id, AppUser entity) {
         super.edit(entity);
     }
     
-//    @RolesAllowed("{Admin,Administration, Regular}")
+    @RolesAllowed("Admin,Administration")
     @DELETE
     @Path("{id}")
     public void remove(@PathParam("id") Long id) {
         super.remove(super.find(id));
     }
     
-//    @RolesAllowed("{Admin,Administration, Regular}")
+    @RolesAllowed("Admin,Administration")
     @GET
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Bouncer find(@PathParam("id") Long id) {
+    public AppUser find(@PathParam("id") Long id) {
         return super.find(id);
     }
     
-//    @RolesAllowed("{Admin,Administration, Regular}")
+    @RolesAllowed("Admin,Administration")
     @GET
     @Override
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public List<Bouncer> findAll() {
+    public List<AppUser> findAll() {
         return super.findAll();
     }
     
-//    @RolesAllowed("{Admin,Administration, Regular}")
+    @RolesAllowed("Admin,Administration")
     @GET
     @Path("{from}/{to}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public List<Bouncer> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
+    public List<AppUser> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
     
-//    @RolesAllowed("{Admin,Administration, Regular}")
+    @RolesAllowed("Admin,Administration")
     @GET
     @Path("count")
     @Produces(MediaType.TEXT_PLAIN)
