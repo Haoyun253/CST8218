@@ -26,7 +26,8 @@ import javax.ws.rs.core.MediaType;
  *
  * @author noahh
  */
-//@DeclareRoles("{Admin,Administration,Regular}")
+@DeclareRoles({"Admin", "ApiGroup"})
+@RolesAllowed({"Admin", "ApiGroup"})
 @Stateless
 @Path("cst8218.haoyun.bouncer.entity.bouncer")
 public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
@@ -38,7 +39,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         super(Bouncer.class);
     }
     
-//    @RolesAllowed("{Admin,Administration, Regular}")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @POST
     @Override
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -46,7 +47,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         super.create(entity);
     }
 
-//    @RolesAllowed("{Admin,Administration, Regular}")    
+    @RolesAllowed({"Admin", "ApiGroup"})    
     @PUT
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -54,14 +55,14 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         super.edit(entity);
     }
     
-//    @RolesAllowed("{Admin,Administration, Regular}")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @DELETE
     @Path("{id}")
     public void remove(@PathParam("id") Long id) {
         super.remove(super.find(id));
     }
     
-//    @RolesAllowed("{Admin,Administration, Regular}")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @GET
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -69,7 +70,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         return super.find(id);
     }
     
-//    @RolesAllowed("{Admin,Administration, Regular}")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @GET
     @Override
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -77,7 +78,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         return super.findAll();
     }
     
-//    @RolesAllowed("{Admin,Administration, Regular}")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @GET
     @Path("{from}/{to}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -85,7 +86,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         return super.findRange(new int[]{from, to});
     }
     
-//    @RolesAllowed("{Admin,Administration, Regular}")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @GET
     @Path("count")
     @Produces(MediaType.TEXT_PLAIN)

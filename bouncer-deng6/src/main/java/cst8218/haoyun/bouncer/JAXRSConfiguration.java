@@ -1,5 +1,7 @@
 package cst8218.haoyun.bouncer;
 
+import cst8218.haoyun.bouncer.service.AppUserFacadeREST;
+import java.util.Set;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
 import javax.security.enterprise.authentication.mechanism.http.BasicAuthenticationMechanismDefinition;

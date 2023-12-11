@@ -26,7 +26,8 @@ import javax.ws.rs.core.MediaType;
  *
  * @author noahh
  */
-@DeclareRoles("{Admin,Administration,Regular}")
+@DeclareRoles({"Admin", "ApiGroup"})
+@RolesAllowed({"Admin", "ApiGroup"})
 @Stateless
 @Path("cst8218.haoyun.bouncer.entity.appuser")
 public class AppUserFacadeREST extends AbstractFacade<AppUser> {
@@ -38,7 +39,7 @@ public class AppUserFacadeREST extends AbstractFacade<AppUser> {
         super(AppUser.class);
     }
     
-    @RolesAllowed("Admin,Administration")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @POST
     @Override
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -46,7 +47,7 @@ public class AppUserFacadeREST extends AbstractFacade<AppUser> {
         super.create(entity);
     }
     
-    @RolesAllowed("Admin,Administration")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @PUT
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -54,14 +55,14 @@ public class AppUserFacadeREST extends AbstractFacade<AppUser> {
         super.edit(entity);
     }
     
-    @RolesAllowed("Admin,Administration")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @DELETE
     @Path("{id}")
     public void remove(@PathParam("id") Long id) {
         super.remove(super.find(id));
     }
     
-    @RolesAllowed("Admin,Administration")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @GET
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -69,7 +70,7 @@ public class AppUserFacadeREST extends AbstractFacade<AppUser> {
         return super.find(id);
     }
     
-    @RolesAllowed("Admin,Administration")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @GET
     @Override
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -77,7 +78,7 @@ public class AppUserFacadeREST extends AbstractFacade<AppUser> {
         return super.findAll();
     }
     
-    @RolesAllowed("Admin,Administration")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @GET
     @Path("{from}/{to}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -85,7 +86,7 @@ public class AppUserFacadeREST extends AbstractFacade<AppUser> {
         return super.findRange(new int[]{from, to});
     }
     
-    @RolesAllowed("Admin,Administration")
+    @RolesAllowed({"Admin", "ApiGroup"})
     @GET
     @Path("count")
     @Produces(MediaType.TEXT_PLAIN)
