@@ -23,7 +23,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- * Allow for restful services on the appUser table
+ *
  * @author noahh
  */
 @DeclareRoles({"Admin", "ApiGroup"})
@@ -39,26 +39,15 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         super(Bouncer.class);
     }
     
-<<<<<<< HEAD
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-//    @RolesAllowed("{Admin,Administration, Regular}")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @POST
     @Override
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public void create(Bouncer entity) {
         super.create(entity);
     }
-<<<<<<< HEAD
 
     @RolesAllowed({"Admin", "ApiGroup"})    
-=======
-    
-    //Add roles that are allowed
-//    @RolesAllowed("{Admin,Administration, Regular}")    
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @PUT
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -66,24 +55,14 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         super.edit(entity);
     }
     
-<<<<<<< HEAD
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-//    @RolesAllowed("{Admin,Administration, Regular}")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @DELETE
     @Path("{id}")
     public void remove(@PathParam("id") Long id) {
         super.remove(super.find(id));
     }
     
-<<<<<<< HEAD
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-//    @RolesAllowed("{Admin,Administration, Regular}")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @GET
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -91,12 +70,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         return super.find(id);
     }
     
-<<<<<<< HEAD
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-//    @RolesAllowed("{Admin,Administration, Regular}")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @GET
     @Override
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -104,12 +78,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         return super.findAll();
     }
     
-<<<<<<< HEAD
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-//    @RolesAllowed("{Admin,Administration, Regular}")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @GET
     @Path("{from}/{to}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -117,12 +86,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         return super.findRange(new int[]{from, to});
     }
     
-<<<<<<< HEAD
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-//    @RolesAllowed("{Admin,Administration, Regular}")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @GET
     @Path("count")
     @Produces(MediaType.TEXT_PLAIN)

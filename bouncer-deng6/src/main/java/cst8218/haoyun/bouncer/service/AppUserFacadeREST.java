@@ -23,7 +23,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- * Add restful services to Bouncer
+ *
  * @author noahh
  */
 @DeclareRoles({"Admin", "ApiGroup"})
@@ -31,97 +31,62 @@ import javax.ws.rs.core.MediaType;
 @Stateless
 @Path("cst8218.haoyun.bouncer.entity.appuser")
 public class AppUserFacadeREST extends AbstractFacade<AppUser> {
-    
+
     @PersistenceContext(unitName = "my_persistence_unit")
     private EntityManager em;
 
     public AppUserFacadeREST() {
         super(AppUser.class);
     }
-<<<<<<< HEAD
     
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-    @RolesAllowed("Admin,Administration")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @POST
     @Override
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public void create(AppUser entity) {
         super.create(entity);
     }
-<<<<<<< HEAD
     
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-    @RolesAllowed("Admin,Administration")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @PUT
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public void edit(@PathParam("id") Long id, AppUser entity) {
         super.edit(entity);
     }
-<<<<<<< HEAD
     
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-    @RolesAllowed("Admin,Administration")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @DELETE
     @Path("{id}")
     public void remove(@PathParam("id") Long id) {
         super.remove(super.find(id));
     }
-<<<<<<< HEAD
     
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-    @RolesAllowed("Admin,Administration")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @GET
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public AppUser find(@PathParam("id") Long id) {
         return super.find(id);
     }
-<<<<<<< HEAD
     
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-    @RolesAllowed("Admin,Administration")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @GET
     @Override
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<AppUser> findAll() {
         return super.findAll();
     }
-<<<<<<< HEAD
     
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-    @RolesAllowed("Admin,Administration")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @GET
     @Path("{from}/{to}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<AppUser> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
-<<<<<<< HEAD
     
     @RolesAllowed({"Admin", "ApiGroup"})
-=======
-    //Add roles that are allowed
-    @RolesAllowed("Admin,Administration")
->>>>>>> 1fd4190924eb11e3782300e216ac1efa2bf61d46
     @GET
     @Path("count")
     @Produces(MediaType.TEXT_PLAIN)
