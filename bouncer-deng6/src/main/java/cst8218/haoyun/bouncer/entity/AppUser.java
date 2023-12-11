@@ -24,7 +24,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author dell
+ * @author Haoyun Deng
+ * 
+ * This is the class that defines the appUser entity. It contains the fields and methods required to correctly implement appUser in your application.
+ * The @Entity annotation specifies that the entity should be represented as a table in the database, using the smae name as the class.
+ * @XmlRootElement annotation specifies that this class can be converted to and from XML during serialization.
  */
 @Entity
 @Table(name = "AppUser2")
@@ -69,6 +73,9 @@ public class AppUser implements Serializable {
         return "";
     }
 
+    /**
+     *This method updates the Bouncer's value. For every non-null property of the new bodyguard, the old bodyguard is updated for that given property.
+     */
     public void setPassword(String password) {
          if (password == null || password.trim().isEmpty()) {
         return;

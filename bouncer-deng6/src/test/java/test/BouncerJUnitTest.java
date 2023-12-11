@@ -44,17 +44,6 @@ public class BouncerJUnitTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-   /* @Test
-    public void testConverterObject() {
-        BouncerController.BouncerControllerConverter converter = new BouncerController.BouncerControllerConverter();
-        Bouncer BObject;
-        BObject = (Bouncer) converter.getAsObject( 
-                new FacesContextWrapper() {
-        },
-                new UIColumn(),
-                "1");
-        assertEquals(BObject, new Bouncer(1L)); 
-    }*/
     
     @Test
     public void testObject() {
