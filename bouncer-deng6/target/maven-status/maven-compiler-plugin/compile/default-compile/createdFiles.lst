@@ -1,0 +1,9 @@
+cst8218\haoyun\bouncer\JAXRSConfiguration.class
+cst8218\haoyun\bouncer\entity\AppUser.class
+cst8218\haoyun\bouncer\resource\JavaEE8Resource.class
+cst8218\haoyun\bouncer\util\PaginationHelper.class
+cst8218\haoyun\bouncer\util\JsfUtil.class
+cst8218\haoyun\bouncer\AbstractFacade.class
+cst8218\haoyun\bouncer\AppUserFacade.class
+cst8218\haoyun\bouncer\service\AbstractFacade.class
+cst8218\haoyun\bouncer\service\AppUserFacadeREST.class
