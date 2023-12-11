@@ -23,7 +23,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- *
+ * Allow for restful services on the appUser table
  * @author noahh
  */
 //@DeclareRoles("{Admin,Administration,Regular}")
@@ -38,6 +38,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         super(Bouncer.class);
     }
     
+    //Add roles that are allowed
 //    @RolesAllowed("{Admin,Administration, Regular}")
     @POST
     @Override
@@ -45,7 +46,8 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
     public void create(Bouncer entity) {
         super.create(entity);
     }
-
+    
+    //Add roles that are allowed
 //    @RolesAllowed("{Admin,Administration, Regular}")    
     @PUT
     @Path("{id}")
@@ -54,6 +56,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         super.edit(entity);
     }
     
+    //Add roles that are allowed
 //    @RolesAllowed("{Admin,Administration, Regular}")
     @DELETE
     @Path("{id}")
@@ -61,6 +64,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         super.remove(super.find(id));
     }
     
+    //Add roles that are allowed
 //    @RolesAllowed("{Admin,Administration, Regular}")
     @GET
     @Path("{id}")
@@ -69,6 +73,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         return super.find(id);
     }
     
+    //Add roles that are allowed
 //    @RolesAllowed("{Admin,Administration, Regular}")
     @GET
     @Override
@@ -77,6 +82,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         return super.findAll();
     }
     
+    //Add roles that are allowed
 //    @RolesAllowed("{Admin,Administration, Regular}")
     @GET
     @Path("{from}/{to}")
@@ -85,6 +91,7 @@ public class BouncerFacadeREST extends AbstractFacade<Bouncer> {
         return super.findRange(new int[]{from, to});
     }
     
+    //Add roles that are allowed
 //    @RolesAllowed("{Admin,Administration, Regular}")
     @GET
     @Path("count")

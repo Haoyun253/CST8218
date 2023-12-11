@@ -23,21 +23,21 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- *
+ * Add restful services to Bouncer
  * @author noahh
  */
 @DeclareRoles("{Admin,Administration,Regular}")
 @Stateless
 @Path("cst8218.haoyun.bouncer.entity.appuser")
 public class AppUserFacadeREST extends AbstractFacade<AppUser> {
-
+    
     @PersistenceContext(unitName = "my_persistence_unit")
     private EntityManager em;
 
     public AppUserFacadeREST() {
         super(AppUser.class);
     }
-    
+    //Add roles that are allowed
     @RolesAllowed("Admin,Administration")
     @POST
     @Override
@@ -45,7 +45,7 @@ public class AppUserFacadeREST extends AbstractFacade<AppUser> {
     public void create(AppUser entity) {
         super.create(entity);
     }
-    
+    //Add roles that are allowed
     @RolesAllowed("Admin,Administration")
     @PUT
     @Path("{id}")
@@ -53,14 +53,14 @@ public class AppUserFacadeREST extends AbstractFacade<AppUser> {
     public void edit(@PathParam("id") Long id, AppUser entity) {
         super.edit(entity);
     }
-    
+    //Add roles that are allowed
     @RolesAllowed("Admin,Administration")
     @DELETE
     @Path("{id}")
     public void remove(@PathParam("id") Long id) {
         super.remove(super.find(id));
     }
-    
+    //Add roles that are allowed
     @RolesAllowed("Admin,Administration")
     @GET
     @Path("{id}")
@@ -68,7 +68,7 @@ public class AppUserFacadeREST extends AbstractFacade<AppUser> {
     public AppUser find(@PathParam("id") Long id) {
         return super.find(id);
     }
-    
+    //Add roles that are allowed
     @RolesAllowed("Admin,Administration")
     @GET
     @Override
@@ -76,7 +76,7 @@ public class AppUserFacadeREST extends AbstractFacade<AppUser> {
     public List<AppUser> findAll() {
         return super.findAll();
     }
-    
+    //Add roles that are allowed
     @RolesAllowed("Admin,Administration")
     @GET
     @Path("{from}/{to}")
@@ -84,7 +84,7 @@ public class AppUserFacadeREST extends AbstractFacade<AppUser> {
     public List<AppUser> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
-    
+    //Add roles that are allowed
     @RolesAllowed("Admin,Administration")
     @GET
     @Path("count")
