@@ -20,9 +20,9 @@ import static org.junit.Assert.*;
  *
  * @author dell
  */
-public class NewEmptyJUnitTest {
+public class BouncerJUnitTest {
 
-    public NewEmptyJUnitTest() {
+    public BouncerJUnitTest() {
     }
 
     @BeforeClass
